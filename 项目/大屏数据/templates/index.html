@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据大屏</title>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/echarts-wordcloud.min.js"></script>
+    <script src="/static/js/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/mapvgl/dist/mapvgl.min.js"></script>
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=lRmHV0BRdEEc2IQGCMV6QGaIWk2SRTj4"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/echarts.css">
+</head>
+<body background="/static/img/bg.jpg">
+<div class="title">
+
+</div>
+<p id="datetime" style="z-index:1;position:absolute;top:5px;color:Silver;font-size:24px"></p>
+<h1 class="h1">糖尿病预测及可视化</h1>
+<br>
+
+<div class="echarts" id="category" style="width:450px;height:350px">
+
+</div>
+
+<div class="echarts2" id="category_1_2" style="width:750px;height:500px">
+
+</div>
+
+<div class="echarts" id="gender_c1" style="width:450px;height:550px">
+
+</div>
+
+<div class="echarts" id="category_2_mount" style="width:450px;height:500px;position:absolute;top:460px">
+
+</div>
+
+<div class="echarts" id="t_y_m_mount" style="width:750px;height:350px;position:absolute;top:610px;left:468px">
+
+</div>
+
+<div class="echarts" id="category_1_mount" style="width:453px;height:300px;position:absolute;top:660px;left:1227px">
+
+</div>
+
+<script>
+     function  getD1(){
+         var date=new Date();
+         var d1=date.toLocaleString();
+         document.getElementById("datetime").innerHTML ='Now：'+d1;
+     }
+
+     setInterval("getD1();",1000);
+
+</script>
+
+<script type="text/javascript" src="/static/js/category.js"></script>
+<script type="text/javascript" src="/static/js/category_1_2.js"></script>
+<script type="text/javascript" src="/static/js/gender_c1.js"></script>
+<script type="text/javascript" src="/static/js/category_2_mount.js"></script>
+<script type="text/javascript" src="/static/js/t_y_m_mount.js"></script>
+<script type="text/javascript" src="/static/js/category_1_mount.js"></script>
+
+</body>
+</html>
